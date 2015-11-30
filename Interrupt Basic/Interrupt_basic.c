@@ -15,9 +15,9 @@
  * Pin 3 Input (Button)
  * Pin 13 Output (LED)
  ****************************************************************************/
-unsigned int BUTTON_ON = 2;
-unsigned int BUTTON_OFF = 3;
-unsigned int LED = 13;
+const byte BUTTON_ON = 2;
+const byte BUTTON_OFF = 3;
+const byte LED = 13;
 
 void setup() {
   // Setup the output pin containing the LED (pin 13)
