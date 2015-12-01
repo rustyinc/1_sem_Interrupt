@@ -24,11 +24,9 @@ void setup() {
   pinMode(LED, OUTPUT);
   
   // Setup the intput pins - the pins are active low
-  pinMode(BUTTON_ON, INPUT);  // Set pin 2 (BUTTON_ON) to input direction
-  pinMode(BUTTON_OFF, INPUT);  // Set pin 3 (BUTTON_OFF) to input direction
-  digitalWrite(BUTTON_ON, HIGH); // Enable resistor to Vcc on pin 2
-  digitalWrite(BUTTON_OFF, HIGH); // Enable resistor to Vcc on pin 3
-
+  pinMode(BUTTON_ON, INPUT_PULLUP);  // Set pin 2 (BUTTON_ON) to input direction, Enable resistor to Vcc on pin 2
+  pinMode(BUTTON_OFF, INPUT_PULLUP);  // Set pin 3 (BUTTON_OFF) to input direction, Enable resistor to Vcc on pin 3
+  
   // Attach interrupt routines to pin two and pin three
   attachInterrupt(digitalPinToInterrupt(BUTTON_ON), turnLEDon, FALLING);
   attachInterrupt(digitalPinToInterrupt(BUTTON_OFF), turnLEDoff, FALLING);
